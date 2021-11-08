@@ -39,6 +39,9 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.newlecture.web.service.dao" />
     </bean>
+    
+<!--     <bean id="transactionManager"> -->
+<!--     </bean> -->
 
 
 </beans>

@@ -1,25 +1,26 @@
 package com.newlecture.web.controller;
 
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 //     http://.../WEB
-@Controller
-@RequestMapping("/")
+@RestController
 public class HomeController {
 
-	@RequestMapping("index")
-	public String index() {
-		
-		return "root.index";
-	}
-	
-	
-	@RequestMapping("home.do")
-	public String home() {
-		
-		return "home";
-	}
+//	@RequestMapping("index")
+//	public String index() {
+//		
+//		return "root.index";
+//	}
+//	
+//	
+//	@RequestMapping("home.do")
+//	public String home() {
+//		
+//		return "home";
+//	}
 	
 //	@Override
 //	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -29,5 +30,20 @@ public class HomeController {
 //		//mv.setViewName("/WEB-INF/view/index.jsp");
 //		return mv;
 //	}
+	
+	@GetMapping("/index")
+	public String ad() {
+		
+		return "test";
+		
+	}
+	
+	
+	@GetMapping("/delete/{variable}")
+	public String DeleteVariable(@PathVariable String variable) {
+		return variable;
+	}
+	
+	
 	
 }
